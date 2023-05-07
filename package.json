@@ -1,7 +1,7 @@
 {
-  "name": "base_node_js_project_template",
+  "name": "flights",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a base node js project template, which anyone can use as it has been prepared, by keeping some of the most important code principles and project management recommendations. Feel free to change anything.",
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon src/index.js"
@@ -17,5 +17,13 @@
     "sequelize": "^6.31.1",
     "sequelize-cli": "^6.6.0",
     "winston": "^3.8.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arkashish/Node-Project-Base-Template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Arkashish/Node-Project-Base-Template/issues"
+  },
+  "homepage": "https://github.com/Arkashish/Node-Project-Base-Template#readme"
 }
