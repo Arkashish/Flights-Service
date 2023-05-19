@@ -53,17 +53,16 @@ async function getAirplanes(req, res) {
 
 async function getAirplane(req, res) {
     try {
-        const airplanes = await AirplaneService.getAirplane(req.parmas.id);
+        const airplanes = await AirplaneService.getAirplane(req.params.id);
         SuccessResponse.data = airplanes;
         return res
             .status(StatusCodes.OK)
-            .json(SuccessResponse)
+            .json(SuccessResponse);
     } catch (error) {
         ErrorResponse.error = error;
         return res
-            // .status(StatusCodes.INTERNAL_SERVER_ERROR)
             .status(error.statusCode)
-            .json(ErrorResponse)
+            .json(ErrorResponse);
     }
 }
 
