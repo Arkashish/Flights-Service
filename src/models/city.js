@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.hasMany(models.Airport, {
+        foreignKey: 'cityId',
+        onDelete: 'CASCADE',
+      })
     }
   }
   City.init({
@@ -19,7 +23,6 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: true
     }
-
   }, {
     sequelize,
     modelName: 'City',
