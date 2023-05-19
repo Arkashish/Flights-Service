@@ -26,6 +26,9 @@ class CrudRepository {
                 id: data
             }
         });
+        if (!response) {
+            throw new AppError('Not able to find the resource', StatusCodes.NOT_FOUND)
+        }
         return response
         // try {
         //     const response = await this.model.destroy({
@@ -44,7 +47,7 @@ class CrudRepository {
         const response = await this.model.findByPk(data);
         //rectified this line -> was giving error
         if (!response) {
-            throw new AppError('Not able to find the resource',StatusCodes.NOT_FOUND)
+            throw new AppError('Not able to find the resource', StatusCodes.NOT_FOUND)
         }
         return response
         // try {
