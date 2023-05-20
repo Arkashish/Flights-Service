@@ -1,5 +1,5 @@
 const express = require('express');
-
+const {City}  =require('./models')
 const { ServerConfig, Logger } = require('./config')
 const apiRoutes = require('./routes')
 const app = express();
@@ -13,7 +13,13 @@ app.use('/api', apiRoutes);
 
 
 // console.log(process.env);
-app.listen(ServerConfig.PORT, () => {
+app.listen(ServerConfig.PORT, async () => {
     console.log(`Suceesfully starting server on port: ${ServerConfig.PORT}`);
     // Logger.info("Successfully started server","root",{})
+    await City.destroy({
+        where: {
+            id: 4
+        }
+    })
 })
+
