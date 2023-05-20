@@ -13,13 +13,8 @@ app.use('/api', apiRoutes);
 
 
 // console.log(process.env);
-app.listen(ServerConfig.PORT, async () => {
+app.listen(ServerConfig.PORT, () => {
     console.log(`Suceesfully starting server on port: ${ServerConfig.PORT}`);
-    // Logger.info("Successfully started server","root",{})
-    await City.destroy({
-        where: {
-            id: 4
-        }
-    })
+    
 })
 
