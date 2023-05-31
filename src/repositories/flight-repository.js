@@ -1,3 +1,5 @@
+
+
 const { Sequelize } = require('sequelize');
 
 const CrudRepository = require('./crud-repository');
@@ -63,7 +65,6 @@ class FlightRepository extends CrudRepository {
 }
 
 module.exports = FlightRepository;
-
 
 
 
